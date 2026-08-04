@@ -40,7 +40,7 @@ JSON request bodies (`Content-Type: application/json`).
 - You can only delete a session with `DELETE /api/sessions/{id}`; `stop` just halts it.
 
 ---
-## VERY IMPORTANT, before creating a new VM check if there are more than two already running. if so refuse to mke a vm and prompt the user if they would like to terminate a session (The backend can only handle two VMs at a time for now)
+## VERY IMPORTANT, before creating a new VM check if there are two already running. if so refuse to make a vm and prompt the user if they would like to terminate a session (The backend can only handle two VMs at a time for now)
 ## Quick start: create and connect a desktop
 
 1. **Create a workstation** — the response includes its unique `id`.
