@@ -15,7 +15,7 @@ in a browser over VNC. This skill tells you how to control them via the NoVM HTT
 > **Base URL** — every request uses this prefix:
 >
 >
-https://8080-01kz9xkkk37mvb4np7h4x9gz7f.cloudspaces.litng.ai
+https://8080-01kzccx9yntmdqddtg05efm4yq.cloudspaces.litng.ai/
 
 IF THAT FAILS FALLBACK TO:
  `https://virtual-xfce-spin--ogsincord.replit.app`
@@ -50,7 +50,7 @@ JSON request bodies (`Content-Type: application/json`).
 1. **Create a workstation** — the response includes its unique `id`.
 
    ```bash
-   curl -X POST "https://8080-01kz9xkkk37mvb4np7h4x9gz7f.cloudspaces.litng.ai" \
+   curl -X POST "https://8080-01kzccx9yntmdqddtg05efm4yq.cloudspaces.litng.ai/" \
      -H "Content-Type: application/json" \
      -d '{"name":"Support Desktop","resolution":"1280x720","disableTimeouts":false}'
    ```
@@ -58,19 +58,19 @@ JSON request bodies (`Content-Type: application/json`).
 2. **Start it** (replace `SESSION_ID` with the returned `id`).
 
    ```bash
-   curl -X POST "https://8080-01kz9xkkk37mvb4np7h4x9gz7f.cloudspaces.litng.ai/api/sessions/SESSION_ID/start"
+   curl -X POST "https://8080-01kzccx9yntmdqddtg05efm4yq.cloudspaces.litng.ai//api/sessions/SESSION_ID/start"
    ```
 
 3. **Get a connection link** — open the returned `url` in a browser.
 
    ```bash
-   curl -X POST "https://8080-01kz9xkkk37mvb4np7h4x9gz7f.cloudspaces.litng.ai/api/sessions/SESSION_ID/connect"
+   curl -X POST "https://8080-01kzccx9yntmdqddtg05efm4yq.cloudspaces.litng.ai//api/sessions/SESSION_ID/connect"
    ```
 
 4. **Disconnect when finished** — revokes links and closes open viewers.
 
    ```bash
-   curl -X POST "https://8080-01kz9xkkk37mvb4np7h4x9gz7f.cloudspaces.litng.ai/api/sessions/SESSION_ID/disconnect"
+   curl -X POST "https://8080-01kzccx9yntmdqddtg05efm4yq.cloudspaces.litng.ai/api/sessions/SESSION_ID/disconnect"
    ```
 
 ### Connection response
@@ -80,7 +80,7 @@ needs access):
 
 ```json
 {
-  "url": "https://https://8080-01kz9xkkk37mvb4np7h4x9gz7f.cloudspaces.litng.ai/api/novnc/viewer?token=TEMPORARY_TOKEN",
+  "url": "https://8080-01kzccx9yntmdqddtg05efm4yq.cloudspaces.litng.ai//api/novnc/viewer?token=TEMPORARY_TOKEN",
   "expiresInSeconds": 900,
   "expiresAt": "2026-08-03T12:15:00.000Z"
 }
