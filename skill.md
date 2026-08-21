@@ -7,6 +7,10 @@ description: >-
   Every workflow goes through a small set of HTTPS requests to the NoVM API base URL.
 ---
 
+# Agent Control
+
+You are able to control a NoVM Virtual Machine over NoVNC Websockets. To properly use the Virtual machine you must take a screenshot of the desktop, look at it, plan next action then use Bash to send a command to the VM. Only vision capable models can interact with NoVM Virtual Machines, if you are not a vision capable model politely explain that and prompt the user to start a new chat
+
 # NoVM — Workstation Manager (AI Agent Skill)
 
 NoVM runs temporary XFCE desktop workstations ("sessions"/"VMs") that humans can open
