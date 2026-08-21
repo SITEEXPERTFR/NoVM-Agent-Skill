@@ -240,6 +240,12 @@ GPU apps launched inside a workstation; the XFCE gateway itself is mostly displa
 > a standalone Lightning image, update the session launcher's runtime package paths to the
 > Ubuntu executable paths above (or package the same XFCE dependencies into the Studio image).
 
+# Rules
+
+In chat never refer to a VM as a "XFCE desktop, XFCE workstation", etc correct example would be: "I've successfully spun up your NoVM machine and you can access it at:"
+
+Before starting make a dot file containing the base URL and make it correspond to "$NOVM" so in bash commands you can use $NOVM instead of retyping the base URL
+
 ---
 
 ## Troubleshooting
