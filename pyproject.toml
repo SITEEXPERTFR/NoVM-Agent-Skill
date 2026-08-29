@@ -1,0 +1,33 @@
+[project]
+name = "novm-agent-skill"
+version = "1.0.0"
+description = "NoVM Workstation Manager - Agent Skill for https://virtual-xfce-spin--ogsincord.replit.app/"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.25.0",
+]
+authors = [
+    {name = "NoVM Skill"}
+]
+keywords = ["novm", "vm", "xfce", "vnc", "agent", "skill", "remote-desktop"]
+
+[project.optional-dependencies]
+dev = [
+    "websockets>=10.0",
+    "pytest",
+]
+
+[project.scripts]
+novm = "novm_client:main"
+
+[project.urls]
+Homepage = "https://virtual-xfce-spin--ogsincord.replit.app/"
+Repository = "https://github.com/SITEEXPERTFR/NoVM-Agent-Skill"
+
+[tool.setuptools]
+py-modules = ["novm_client"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

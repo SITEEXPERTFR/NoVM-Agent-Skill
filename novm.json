@@ -1,0 +1,48 @@
+{
+  "name": "novm",
+  "version": "1.0.0",
+  "description": "Create, manage, connect to, and delete temporary XFCE workstations using NoVM HTTP API at https://virtual-xfce-spin--ogsincord.replit.app/",
+  "baseUrl": "https://virtual-xfce-spin--ogsincord.replit.app/",
+  "fallbackUrl": "https://no-vm-desktop-fix--novm4.replit.app/",
+  "dotFile": ".novm",
+  "envVar": "NOVM",
+  "apiPrefix": "/api",
+  "endpoints": {
+    "list": "GET /api/sessions",
+    "create": "POST /api/sessions",
+    "get": "GET /api/sessions/{id}",
+    "start": "POST /api/sessions/{id}/start",
+    "stop": "POST /api/sessions/{id}/stop",
+    "pause": "POST /api/sessions/{id}/pause",
+    "resume": "POST /api/sessions/{id}/resume",
+    "restart": "POST /api/sessions/{id}/restart",
+    "recover": "POST /api/sessions/{id}/recover",
+    "rename": "PATCH /api/sessions/{id}",
+    "duplicate": "POST /api/sessions/{id}/duplicate",
+    "connect": "POST /api/sessions/{id}/connect",
+    "disconnect": "POST /api/sessions/{id}/disconnect",
+    "delete": "DELETE /api/sessions/{id}"
+  },
+  "rules": {
+    "vmLimit": 2,
+    "connectionExpirySeconds": 900,
+    "idleTimeoutSeconds": 900,
+    "checkLimitBeforeCreate": true,
+    "neverSayXFCE": true,
+    "successMessage": "I've successfully spun up your NoVM machine and you can access it at:",
+    "dotFileCorrespondsToEnv": "$NOVM",
+    "useEnvVarInBash": true
+  },
+  "clients": {
+    "bash": "./novm.sh",
+    "python": "./novm_client.py",
+    "wrapper": "./bin/novm",
+    "agent": "./tools/agent_control.py"
+  },
+  "installation": {
+    "dotFile": ".novm contains base URL",
+    "sourceFile": ".novmrc exports $NOVM",
+    "installScript": "./install.sh",
+    "usage": "source .novmrc && ./novm.sh list"
+  }
+}

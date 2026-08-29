@@ -1,0 +1,17 @@
+{
+  "name": "novm-mock-backend",
+  "version": "1.0.0",
+  "description": "NoVM Mock Backend compatible with https://virtual-xfce-spin--ogsincord.replit.app/ - for non-creators to deploy own copy",
+  "main": "deploy/mock_server.js",
+  "scripts": {
+    "dev": "node deploy/mock_server.js",
+    "start": "node deploy/mock_server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "uuid": "^9.0.0"
+  },
+  "keywords": ["novm", "mock", "xfce", "vnc", "replit"],
+  "author": "NoVM Skill"
+}

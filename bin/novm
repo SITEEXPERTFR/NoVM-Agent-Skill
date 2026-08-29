@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# NoVM CLI wrapper - ensures $NOVM is set from .novm dot file
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# Load dot file
+if [ -f "$SCRIPT_DIR/.novm" ]; then
+  export NOVM=$(cat "$SCRIPT_DIR/.novm" | tr -d '\n' | xargs)
+elif [ -f "$HOME/.novm" ]; then
+  export NOVM=$(cat "$HOME/.novm" | tr -d '\n' | xargs)
+else
+  export NOVM="${NOVM:-https://virtual-xfce-spin--ogsincord.replit.app/}"
+fi
+
+# Ensure trailing slash
+[[ "$NOVM" != */ ]] && NOVM="$NOVM/"
+
+# Call main script
+exec bash "$SCRIPT_DIR/novm.sh" "$@"
