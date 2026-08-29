@@ -1,0 +1,5 @@
+# NoVM configuration - source this file to get $NOVM
+export NOVM="https://virtual-xfce-spin--ogsincord.replit.app/"
+export NOVM_PRIMARY="https://virtual-xfce-spin--ogsincord.replit.app/"
+export NOVM_FALLBACK="https://no-vm-desktop-fix--novm4.replit.app/"
+export NOVM_API="$NOVM"

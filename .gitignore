@@ -1,0 +1,17 @@
+# NoVM - ignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env.local
+*.log
+.DS_Store
+node_modules/
+dist/
+build/
+*.backup
+backups/
+tmp/
+.screenshots/
